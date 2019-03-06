@@ -32,10 +32,10 @@ public class List_inArraySlots {
       */ 
     public String toString() {
 	String array = "[";
-	for (int i = 0; i<List_inArraySlots.size() - 2 ; i++){
+	for (int i = 0; i< refArray.length - 2 ; i++){
 	    array += refArray[i] + ",";
 	}
-	array += refArray[List_inArraySlots.size() - 1] + "]";
+	array += refArray[refArray.length - 1] + "]";
 	return array;   
     }
 
