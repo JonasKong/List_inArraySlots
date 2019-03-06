@@ -6,29 +6,38 @@
 public class List_inArraySlots {
 
     // declare fields here
-
+    public int[] refArray;
+    public int[] filledElements;
 
 
     /**
       Construct an empty list with a small initial capacity.
      */
     public List_inArraySlots() {
+	refArray = new int[10];
     }
 
 
     /** 
       @return the number of elements in this list
-     */
-    // public int size() {
-    // }
+    */
+    public int size() {
+	return refArray.length;
+    }
 
 
      /** 
        @return a string representation of this list,
        in [a,b,c,] format
       */ 
-    // public String toString() {
-    // }
+    public String toString() {
+	String array = "[";
+	for (int i = 0; i<List_inArraySlots.size() - 2 ; i++){
+	    array += refArray[i] + ",";
+	}
+	array += refArray[List_inArraySlots.size() - 1] + "]";
+	return array;   
+    }
 
     
     /** 
