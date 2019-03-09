@@ -12,6 +12,8 @@ Constructors
 Methods
 - Return the length of the list
 - Append an element to the list
-- Double the size of a list
+- Double the size of the list
+- Get an element of the list
+- Change an element of the list
 
 ###### The UserOfList class should not input duplicate values in the list.
