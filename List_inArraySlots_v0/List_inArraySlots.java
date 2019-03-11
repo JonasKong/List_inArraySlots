@@ -88,12 +88,12 @@ public class List_inArraySlots {
       (that is, increase the index associated with each).
      */
      public void add( int index, int value) {
-		for (int i = index; i < this.elements.length; i ++){
-			if (i == this.elements.length - 1) {
+		for (int i = index; i < this.refArray.length; i ++){
+			if (i == this.refArray.length - 1) {
 				this.expand();
 			}
-			int x = this.elements[i];
-			this.elements[i] = value;
+			int x = this.refArray[i];
+			this.refArray[i] = value;
 			value = x;
 		}
      }
@@ -108,14 +108,15 @@ public class List_inArraySlots {
       @return the value that was removed from the list
      */
      public int remove( int index) {
-		 int length = this.elements.length;
-		 int removed = this.elements[index];
+		 int length = this.refArray.length;
+		 int removed = this.refArray[index];
 		 for (int i = index; i < length; i ++){
 			 if (i == length - 1) {
-				 this.elements[i] = 0;
+				 this.refArray[i] = 0;
 			 } else {
-				this.elements[i] = this.elements[i + 1];
+				this.refArray[i] = this.refArray[i + 1];
 			 }
 		 }
+		 return removed;
      }
 }
