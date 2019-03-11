@@ -54,19 +54,26 @@ public class List_inArraySlots {
 		return true;
 	}
 
+	public int get( int index ) {
+		return refArray[index];
+    }
 
+	public int set( int index, int newValue ) {
+		int oldValue = refArray[index];
+		refArray[index] = newValue;
+		return oldValue;
+    }
+	
     /** 
       Double the capacity of the List_inArraySlots, 
       preserving existing data
      */
     private void expand() {
         System.out.println( "expand... (for debugging)");
-        int newCapacity = refArray.length * 2;
-		int[] newArray = new int [newCapacity];
+		int[] newArray = new int [refArray.length*2];
 		for (int i = 0; i < refArray.length; i++){
 			newArray [i] = refArray [i];
 		}
-		refArray = new int[newCapacity];
 		refArray = newArray;
     }
 	
