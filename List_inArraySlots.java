@@ -69,4 +69,46 @@ public class List_inArraySlots {
 		refArray = new int[newCapacity];
 		refArray = newArray;
     }
+	
+	
+	
+	
+	/**
+      Insert @value at position @index in this list.
+
+      Shift the element currently at that position (if any)
+      and any subsequent elements to the right
+      (that is, increase the index associated with each).
+     */
+     public void add( int index, int value) {
+		for (int i = index; i < this.elements.length; i ++){
+			if (i == this.elements.length - 1) {
+				this.expand();
+			}
+			int x = this.elements[i];
+			this.elements[i] = value;
+			value = x;
+		}
+     }
+	
+	
+	/**
+      Remove the element at position @index in this list.
+
+      Shift any subsequent elements to the left (that is,
+      decrease the index associated with each).
+
+      @return the value that was removed from the list
+     */
+     public int remove( int index) {
+		 int length = this.elements.length;
+		 int removed = this.elements[index];
+		 for (int i = index; i < length; i ++){
+			 if (i == length - 1) {
+				 this.elements[i] = 0;
+			 } else {
+				this.elements[i] = this.elements[i + 1];
+			 }
+		 }
+     }
 }
