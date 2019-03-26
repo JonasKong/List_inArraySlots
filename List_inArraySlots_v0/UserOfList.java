@@ -47,6 +47,14 @@ public class UserOfList {
 		 //addAtTest( 2, 19); // middle of a small list
 		 //addAtTest( 2, 23); // force an expansion 
 		
-		
+		// --------- end of "code that worked in v0" ---------
+
+        // test accessor
+        System.out.println( "sample elements from list:");
+        for( int elemIndex = 1; elemIndex < list.size(); elemIndex *= 2 ) {
+            System.out.println( "element " + elemIndex + ": "
+                              + list.get( elemIndex)
+                              );
+        }
 	 }
 }

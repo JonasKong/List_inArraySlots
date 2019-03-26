@@ -98,6 +98,16 @@ public class List_inArraySlots {
 		}
      }
 	
+	public void addAsHead(int val) {
+		for (int i = 0; i < this.refArray.length; i++) {
+			if (i == this.refArray.length - 1) {
+				this.expand();
+			}
+			int x = this.refArray[i];
+			this.refArray[i] = value;
+			value = x;
+		}
+	}
 	
 	/**
       Remove the element at position @index in this list.
@@ -119,4 +129,5 @@ public class List_inArraySlots {
 		 }
 		 return removed;
      }
+	 
 }
